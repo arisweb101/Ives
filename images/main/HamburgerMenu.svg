@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-3234.051 -1139 14.102 13">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+      }
+    </style>
+  </defs>
+  <g id="HamburgerMenu" transform="translate(-3496 -1168)">
+    <g id="Group_66" data-name="Group 66" transform="translate(261.949 29)">
+      <g id="Group_63" data-name="Group 63">
+        <path id="Path_82" data-name="Path 82" class="cls-1" d="M13.22,1.763H.881A.881.881,0,0,1,.881,0H13.22a.881.881,0,1,1,0,1.763Z"/>
+      </g>
+      <g id="Group_64" data-name="Group 64" transform="translate(0 5.619)">
+        <path id="Path_83" data-name="Path 83" class="cls-1" d="M13.22,27.263H.881a.881.881,0,1,1,0-1.763H13.22a.881.881,0,1,1,0,1.763Z" transform="translate(0 -25.5)"/>
+      </g>
+      <g id="Group_65" data-name="Group 65" transform="translate(0 11.237)">
+        <path id="Path_84" data-name="Path 84" class="cls-1" d="M13.22,52.763H.881A.881.881,0,1,1,.881,51H13.22a.881.881,0,1,1,0,1.763Z" transform="translate(0 -51)"/>
+      </g>
+    </g>
+  </g>
+</svg>

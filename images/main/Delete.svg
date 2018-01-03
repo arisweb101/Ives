@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-2536 -529 11.09 13.783">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #b1b1b1;
+      }
+    </style>
+  </defs>
+  <g id="Delete" transform="translate(-2536 -529)">
+    <path id="Path_117" data-name="Path 117" class="cls-1" d="M11.079,3.377A1.132,1.132,0,0,0,9.943,2.241H8.628v-1.1A1.132,1.132,0,0,0,7.491,0h-3.9A1.132,1.132,0,0,0,2.452,1.136v1.1H1.136A1.138,1.138,0,0,0,0,3.377V5.534H1.231v7.007a1.131,1.131,0,0,0,1.01,1.242H8.849a1.131,1.131,0,0,0,1.01-1.242v-7H11.09V3.377ZM3.714,1.263H7.365v.979H3.714ZM1.263,3.5H9.817v.768H1.263ZM8.6,12.521h-6.1V5.545H8.6Z"/>
+    <rect id="Rectangle_190" data-name="Rectangle 190" class="cls-1" width="1.263" height="4.524" transform="translate(3.788 6.734)"/>
+    <rect id="Rectangle_191" data-name="Rectangle 191" class="cls-1" width="1.263" height="4.524" transform="translate(6.071 6.734)"/>
+  </g>
+</svg>

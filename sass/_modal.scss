@@ -1,0 +1,205 @@
+/*MODAL */
+
+body {
+	padding:0 !important;
+}
+
+.modal {
+	color:#959595;
+	text-align: center;
+ 	padding: 0!important;
+
+}
+
+.modal:before {
+  content: '';
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+  margin-right: -4px;
+}
+
+.modal-content {
+	background:#f7f8fa;
+}
+
+.modal-dialog {
+  display: inline-block;
+  text-align: left;
+  vertical-align: middle;
+  @include check-sm();
+}
+
+.modal-body {
+	display:inline-block;
+}
+
+
+/* Sign In Modal */
+#signin {
+
+	.close {
+		position: absolute;
+		right: 114px;
+   		top: 36px;
+		}
+
+	.logo-signin {
+		position:absolute;
+		top:36px;
+		left:-33px;
+	}
+
+	.modal-dialog {
+		width:400px;
+		
+		.modal-content {
+			@include box-shadow(1px 1px 2px 0 #555);
+			padding:20px 40px;
+
+			.modal-header {
+				text-align: center;
+				border:none;
+
+				h3 {
+					text-align: center;
+					@include font-light();
+				}
+
+			}
+
+			.modal-body {
+					@include forms();
+
+		}
+	}
+	}
+}
+
+/* Profile Setup */
+
+#profile-setup {
+
+	.close {
+		position: absolute;
+		right: 114px;
+   		top: 36px;
+		}
+
+	.logo-signin {
+		position:absolute;
+		top:36px;
+		left:-33px;
+	}
+
+	.modal-dialog {
+		width:700px;
+		
+		.modal-content {
+			@include box-shadow(1px 1px 2px 0 #555);
+			padding:20px 40px;
+
+			.modal-header {
+				text-align: center;
+				border:none;
+
+				h3 {
+					text-align: center;
+					@include font-light();
+				}
+
+			}
+
+			.modal-body {
+
+					@include forms();
+
+					input[type='text'] {
+						height:35px !important;
+					}
+
+					.blue-bt {
+						width:180px !important;
+
+					}
+				}
+			}
+	}
+
+}
+
+
+
+/* Sign In Modal */
+#delete-campaign {
+
+	
+
+	.close {
+		position: absolute;
+		right: 10px;
+   		top: 10px;
+		}
+
+	.logo-signin {
+		position:absolute;
+		top:36px;
+		left:-33px;
+	}
+
+	.modal-dialog {
+		width:310px;
+		
+		.modal-content {
+			@include box-shadow(1px 1px 2px 0 #555);
+			padding:10px 0px;
+
+			.modal-header {
+				text-align: center;
+				border:none;
+
+				h3 {
+					text-align: center;
+					@include font-light();
+				}
+
+			}
+
+			.modal-body {
+					@include forms();
+
+					.enterpass {
+						font-size: 11px;
+						margin-bottom: 8px;
+					}
+					
+					.cancel {
+					height: 45px;
+	   				margin: 0 10px 0 0;
+	    			padding: 0;
+	   				text-align: center;
+	    			width: 115px;
+					}
+
+					.form-control {
+						width: 100%;
+						text-align: center;
+						height: 40px;
+						line-height: 40px;
+						font-size: 25px;
+					}
+
+					.continue {
+					height: 45px !important;
+	   				margin: 0 0px 0 0 !important;
+	    			padding: 0 !important;
+	   				text-align: center !important;
+	    			width: 115px !important;
+					}
+
+
+
+		}
+	}
+	}
+}

@@ -1,0 +1,65 @@
+/** Create Account **/
+
+.main-wrapper {
+	
+
+	.home {
+
+		padding:40px 0;
+		
+		.signin {
+				padding:0;
+		}
+		.createAccount {
+			width:350px;
+			background:#fff;
+			@include border-radius(5px);
+			@include box-shadow(1px 1px 10px 0 #555);
+			padding:25px 50px 25px;
+			color:#878788;
+			text-align:center;
+			display:inline-block;
+			margin-top: 60px;
+
+			h2 {
+			font-size:22px;
+			text-align: center;
+			font-family: 'proxima_novalight';
+			margin-bottom: 30px;
+			}
+			
+			.txtfield {
+			@include txt-prop();
+			font-size: 14px;
+			height:45px;
+				
+			}
+
+			button {
+			@include blue-bt();
+			width:100%;
+			height:50px;
+			margin-top: 20px;
+			font-weight: bold;
+
+	
+			}
+
+		}
+
+		.welcome {
+			color:#fff;
+			font-size: 16px;
+			
+			.logo {
+				margin:120px 0 20px;
+			}
+			h1 {
+				@include font-light();
+				margin:20px 0;
+			}
+		}
+
+	}
+
+}

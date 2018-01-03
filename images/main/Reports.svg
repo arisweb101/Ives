@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-3468 -804 13.935 17">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #707888;
+      }
+    </style>
+  </defs>
+  <g id="Reports" transform="translate(-3496 -1077)">
+    <path id="Path_90" data-name="Path 90" class="cls-1" d="M13.841,4.3c-.013-.013-.013-.027-.027-.027a1.423,1.423,0,0,0-.12-.147L9.879.228A.736.736,0,0,0,9.33,0h-7.6A1.731,1.731,0,0,0,0,1.727V15.273A1.731,1.731,0,0,0,1.727,17H12.194a1.731,1.731,0,0,0,1.727-1.727V5.207h.013V4.618A.534.534,0,0,0,13.841,4.3ZM10.12,3.9V2.65l1.2,1.245h-1.2ZM8.567,1.513V4.658a.777.777,0,0,0,.776.776H12.4v9.8a.187.187,0,0,1-.187.2H1.74a.183.183,0,0,1-.187-.187V1.7a.183.183,0,0,1,.187-.187Z" transform="translate(28 273)"/>
+    <g id="Group_72" data-name="Group 72" transform="translate(31.36 279.76)">
+      <rect id="Rectangle_150" data-name="Rectangle 150" class="cls-1" width="2.543" height="1.071"/>
+    </g>
+    <g id="Group_73" data-name="Group 73" transform="translate(31.36 282.263)">
+      <rect id="Rectangle_151" data-name="Rectangle 151" class="cls-1" width="7.135" height="1.071"/>
+    </g>
+    <g id="Group_74" data-name="Group 74" transform="translate(31.36 284.766)">
+      <rect id="Rectangle_152" data-name="Rectangle 152" class="cls-1" width="4.511" height="1.071"/>
+    </g>
+  </g>
+</svg>

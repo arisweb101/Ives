@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-4698 1804.19 15.659 19.982">
+  <defs>
+    <style>
+      .cls-1 {
+        opacity: 0.855;
+      }
+
+      .cls-2 {
+        fill: #fff;
+      }
+    </style>
+  </defs>
+  <g id="AssignedDTMF" class="cls-1" transform="translate(-4698 1804.19)">
+    <ellipse id="Ellipse_40" data-name="Ellipse 40" class="cls-2" cx="1.631" cy="1.631" rx="1.631" ry="1.631"/>
+    <ellipse id="Ellipse_41" data-name="Ellipse 41" class="cls-2" cx="1.631" cy="1.631" rx="1.631" ry="1.631" transform="translate(6.199)"/>
+    <ellipse id="Ellipse_42" data-name="Ellipse 42" class="cls-2" cx="1.631" cy="1.631" rx="1.631" ry="1.631" transform="translate(12.397)"/>
+    <ellipse id="Ellipse_43" data-name="Ellipse 43" class="cls-2" cx="1.631" cy="1.631" rx="1.631" ry="1.631" transform="translate(0 5.546)"/>
+    <ellipse id="Ellipse_44" data-name="Ellipse 44" class="cls-2" cx="1.631" cy="1.631" rx="1.631" ry="1.631" transform="translate(6.199 5.546)"/>
+    <ellipse id="Ellipse_45" data-name="Ellipse 45" class="cls-2" cx="1.631" cy="1.631" rx="1.631" ry="1.631" transform="translate(12.397 5.546)"/>
+    <ellipse id="Ellipse_46" data-name="Ellipse 46" class="cls-2" cx="1.631" cy="1.631" rx="1.631" ry="1.631" transform="translate(0 11.174)"/>
+    <g id="Group_351" data-name="Group 351" transform="translate(6.198 11.174)">
+      <ellipse id="Ellipse_47" data-name="Ellipse 47" class="cls-2" cx="1.631" cy="1.631" rx="1.631" ry="1.631" transform="translate(0 0)"/>
+    </g>
+    <ellipse id="Ellipse_48" data-name="Ellipse 48" class="cls-2" cx="1.631" cy="1.631" rx="1.631" ry="1.631" transform="translate(12.397 11.174)"/>
+    <ellipse id="Ellipse_49" data-name="Ellipse 49" class="cls-2" cx="1.631" cy="1.631" rx="1.631" ry="1.631" transform="translate(6.199 16.72)"/>
+  </g>
+</svg>

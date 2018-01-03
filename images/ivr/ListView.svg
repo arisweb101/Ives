@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-3508.537 1757 12.537 7.5">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #a9afbc;
+      }
+    </style>
+  </defs>
+  <g id="ListView" transform="translate(-4735 1733)">
+    <path id="Path_224" data-name="Path 224" class="cls-1" d="M11.978,1.119H.56A.554.554,0,0,1,0,.56.554.554,0,0,1,.56,0H11.978a.554.554,0,0,1,.56.56A.554.554,0,0,1,11.978,1.119Z" transform="translate(1226.463 24)"/>
+    <path id="Path_225" data-name="Path 225" class="cls-1" d="M11.978,29.619H.56a.56.56,0,0,1,0-1.119H11.978a.56.56,0,0,1,0,1.119Z" transform="translate(1226.463 -1.31)"/>
+    <path id="Path_226" data-name="Path 226" class="cls-1" d="M38.8,58.119H30.76a.56.56,0,1,1,0-1.119H38.8a.56.56,0,0,1,0,1.119Z" transform="translate(1199.643 -26.619)"/>
+  </g>
+</svg>

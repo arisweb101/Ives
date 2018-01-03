@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-3201.317 -782.752 6.434 10.892">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #b5bed0;
+      }
+    </style>
+  </defs>
+  <path id="LeftArrow" class="cls-1" d="M0,.214v10.5a.188.188,0,0,0,.316.143l6.053-5.25a.192.192,0,0,0,0-.287L.316.07A.188.188,0,0,0,0,.214Z" transform="translate(-3194.884 -771.843) rotate(180)"/>
+</svg>

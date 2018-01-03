@@ -1,0 +1,83 @@
+
+// Body
+$body-bg: #f5f8fa;
+$default-tcolor: #313543;
+
+// Borders
+$laravel-border-color: darken($body-bg, 10%);
+$list-group-border: $laravel-border-color;
+$navbar-default-border: $laravel-border-color;
+$panel-default-border: $laravel-border-color;
+$panel-inner-border: $laravel-border-color;
+$default-border:#d4d4d4;
+
+// Brands
+$brand-primary: #3097D1;
+$brand-info: #8eb4cb;
+$brand-success: #2ab27b;
+$brand-warning: #cbb956;
+$brand-danger: #bf5329;
+
+// Typography
+$font-family-sans-serif: "Raleway", sans-serif;
+$font-size-base: 16px;
+$line-height-base: 1.6;
+$text-color: #636b6f;
+
+// Navbar
+$navbar-default-bg: #fff;
+$navbar-button-search-bg: #452f93;
+$navbar-button-search-text-color: #fff;
+$navbar-button-quicksearch-bg: #452f93;
+$navbar-button-quicksearch-text-color: #fff;
+$navbar-bg-menu-color: #3a3856;
+
+// Footer
+$footer-background-bg: #2c2b37;
+$footer-text-color: #6b6b6f;
+
+// Buttons
+$bt-violet: #452f93;
+$bt-hviolet: #382283;
+$bt-orange: #f9540b;
+$bt-horange: #fc621e;
+$bt-white: #fff;
+$bt-border: #4a80b7;
+$bt-text: #2c2f34;
+$primary-button-color: #f9540b;
+
+// Colors
+$primary-text-color: #2546ad;
+
+// Mix
+@mixin boxshadow($bshadow) {
+	-webkit-box-shadow: boxshadow($bshadow);
+	-moz-box-shadow: boxshadow($bshadow);
+	box-shadow: boxshadow($bshadow);
+}
+@mixin rotate($degrees) {
+    -webkit-transform: rotate($degrees);
+    -moz-transform: rotate($degrees);
+    -ms-transform: rotate($degrees);
+    -o-transform: rotate($degrees);
+    transform: rotate($degrees);
+    -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=#{cos($degrees)}, M12=#{-1*sin($degrees)}, M21=#{sin($degrees)}, M22=#{cos($degrees)})";
+    filter:  progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=#{cos($degrees)}, M12=#{-1*sin($degrees)}, M21=#{sin($degrees)}, M22=#{cos($degrees)});
+}
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
+}
+// Inputs
+$input-border: lighten($text-color, 40%);
+$input-border-focus: lighten($brand-primary, 25%);
+$input-color-placeholder: lighten($text-color, 30%);
+
+// Panels
+$panel-default-heading-bg: #fff;
+
+// Misc
+$violet: #452f93;
+$black: #3a3b51;

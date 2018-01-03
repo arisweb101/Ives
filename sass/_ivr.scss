@@ -1,0 +1,405 @@
+html,
+body {
+ height: 100%; margin: 0px; padding: 0px; 
+}
+
+#diagramContainer {
+   height: 100vh;
+  margin-bottom: 10px;
+  width: 100%;
+  display: block;
+}
+.item {
+            height:80px; width: 80px;
+            border: 1px solid blue;
+    		position:absolute;
+        }
+#start {
+	left: calc(50% - 72px);
+    position: relative;
+    right: 0;
+    top: 120px;
+    width: 144px;
+    cursor: grab;
+
+    &:hover {
+		opacity: 0.8;
+	}
+ 
+}
+
+.ivr-wrapper {
+
+}
+
+/* MODAL PopUp */
+
+.modal-open .modal {
+	z-index:999999;
+}
+
+.ivr {
+	
+	.modal-dialog {
+		color:#697182;
+		width: 450px;
+
+		
+		.modal-content {
+			
+			@include border-radius(3px);
+
+			.modal-header {
+				border:none;
+
+				.modal-title {
+					padding:10px;
+				}
+			}
+			.modal-body {
+				padding:0 30px 30px;
+				width: 100%;
+				
+				.group-layer {
+					
+					margin-bottom: 20px;
+						
+						.ivr-titles {
+						   font-size:14px;
+						   margin-bottom:10px;
+						  
+						}
+						#basic-addon1 {
+							height: 38px;
+						}
+				
+				input[type="text"] {
+					border: 1px solid #ddd;
+					@include border-radius(5px);
+				    height: 38px;
+				    text-indent: 15px;
+				    width:100%;
+
+				}
+
+				textarea {
+					border: 1px solid #ddd;
+					@include border-radius(5px);
+				    height: 100px;
+				    margin: 6px 0 25px;
+				    text-indent: 20px;
+				    width:100%;
+				    padding-top:12px;
+				    resize: none;
+
+				}
+
+				.upload {
+					padding:0;
+					font-size: 14px;
+					width: 100% !important;
+					position:relative;
+					z-index: 333;
+					background:#fff;
+					border-radius:3px 0px 0px 3px !important;					
+				}
+				.browse {
+					height: 38px;
+					width: 110px;
+					background: #edf0f7;
+					border-radius:0 3px 3px 0 !important;
+					border:1px solid #ddd;
+					color:#7a8190;
+					position:relative;
+					z-index: 222;
+
+				}
+				.file {
+					border-radius: 5px;
+	    			color: #cfcfcf;
+	    		    height: 50px;
+	                line-height: 50px;
+	                position: absolute;
+	                visibility: hidden;
+				}
+				}		
+				.cancel {
+					height: 45px;
+	   				margin: 0 10px 0 0;
+	    			padding: 0;
+	   				text-align: center;
+	    			width: 100px;
+				}
+
+				
+
+				.add {
+					height: 45px;
+	   				margin: 0 10px 0 0;
+	    			padding: 0;
+	   				text-align: center;
+	    			width: 100px;
+				}
+			}
+			}
+		}
+	}
+
+
+/*FEATURES*/
+.source-endpoint svg * {
+    fill: transparent;
+    stroke: transparent;
+    outlineStroke: transparent;
+    cursor: pointer;
+
+    &:hover {
+    	fill: rgba(0, 0, 0, 0.1);
+    	
+    }
+}
+
+.menu-endpoint svg * {
+    fill: transparent;
+    stroke: transparent;
+    outlineStroke: transparent;
+    cursor: pointer;
+
+    &:hover {
+    	fill: rgba(0, 0, 0, 0.1);
+    }
+}
+
+.menu-num-endpoint svg * {
+    fill: transparent;
+    stroke: transparent;
+    outlineStroke: transparent;
+    cursor: pointer;
+
+    &:hover {
+    	fill: rgba(0, 0, 0, 0.1);
+    	
+    }
+}
+
+#start:hover ~ .source-endpoint svg *, .texttospeech:hover ~ .source-endpoint svg *, .texttospeech:hover ~ .menu-endpoint svg *, .mainmenu:hover ~ .source-endpoint svg *,
+.transfercall:hover ~ .source-endpoint svg *, .sendsms:hover~ .source-endpoint svg *, .soundclip:hover ~ .source-endpoint svg *  {
+	fill: rgba(0, 0, 0, 0.1);
+}
+
+.texttospeech, .mainmenu,  .transfercall, .sendsms, .soundclip {
+	width:460px;
+	@include border-radius(5px);
+	@include box-shadow(1px 1px 5px 0.5px #ddd);
+	background:#f7f8fa;
+	min-height:100px;
+	display:block;
+	position:absolute;
+	top:150px;
+	left:300px;
+	cursor:grab;
+	
+	&:hover {
+		box-shadow:0 0 0 8px rgba(0, 206, 255, 3), 0 7px 12px 1px rgba(0, 0, 0, 0.06);
+	}
+	.features-header {
+		background:#607dbe;
+		height: 40px;
+		line-height: 40px;
+		@include border-radius(5px 5px 0px 0);
+		display: block;
+		color:#e4e9f3;	
+		font-size: 16px;
+		@include semi-bold();
+
+		.edit-icon {
+			padding:0 5px;
+			padding-right:10px;
+			color:#e4e9f3;	
+
+			a {
+				color:#e4e9f3;	
+				text-decoration: none;
+
+				&:hover {
+					color:#fff;
+				}
+			}
+		}
+		.delete-icon {
+			color:#e4e9f3;	
+
+			a {
+				color:#e4e9f3;	
+				text-decoration: none;
+
+				&:hover {
+					color:#fff;
+				}
+			}
+		}
+	}
+	
+	.features-body {
+		color: #7c7c7d;
+	    display: inline-block;
+	    font-size: 16px;
+	    line-height: 26px;
+	    padding: 20px;
+	    width: 100%;
+		}
+
+	.form-control {
+		height:42px;
+		z-index: 0;
+	}
+}
+
+.transfercall {
+	width:370px;
+}
+
+.soundclip {
+	width:300px;
+
+	.sound {
+		position:relative;
+		top:5px;
+		left: 15px;
+	}
+}
+
+
+.mainmenu {
+	width:600px;
+	@include border-radius(5px);
+	@include box-shadow(1px 1px 5px 0.5px #ddd);
+	background:#f7f8fa;
+	min-height:100px;
+	display:block;
+	position:absolute;
+	top:100px;
+	left:300px;
+
+	.features-header {
+		background:#36c5d1;
+		height: 40px;
+		line-height: 40px;
+		@include border-radius(5px 5px 0px 0);
+		display: block;
+		color:#e4e9f3;	
+		font-size: 16px;
+		@include semi-bold();
+
+		.edit-icon {
+			padding:0 5px;
+		}
+	}
+	
+	.features-body {
+		padding:0px;
+		color:#7c7c7d;
+		font-size: 16px;
+		line-height: 26px;
+		display: inline;
+
+		.menu-message {
+			cursor: default;
+		    height: 200px;
+		    margin: 10px 0;
+		    overflow-y: scroll;
+		    padding: 20px;
+
+		}
+
+		.num  {
+			
+			background:#fff;
+			height: 100%;
+			display: inline-block;
+
+
+			ul {
+			padding:20px 15px;
+			margin:0;
+			list-style: none;
+			display: inline-block;
+			
+
+			li {
+				border:1px solid #c5cad3;
+				@include border-radius(5px);
+				margin:5px;
+				background:#fff;
+				padding:6px;
+				font-size: 25px;
+				text-align: center;
+				vertical-align: center;
+				width: 25.3%;
+				float: left;
+				color:#c5cad3;
+				position:relative;
+				
+				&:hover {
+					color:#fff;
+					border:1px solid #36c5d1;
+					text-decoration: none;
+					@include box-shadow(1px 1px 10px 0 #ddd);
+					background:#36c5d1;
+				}
+
+
+			}
+		
+
+		}
+	}
+	}
+}
+
+
+/** Flowchart Features **/
+
+#diagramContainer {
+	width:100%;
+	height:100vh;
+	cursor:grab;
+	touch-action:none;
+}
+
+
+#jquery {
+	position:absolute;
+	width:100px;
+	height:100px;
+}
+
+.window { z-index:20; }
+.jtk-connector { z-index:4; }
+.jtk-endpoint { z-index:5; }
+.jtk-overlay { z-index:6; }
+
+
+.drop-container {
+  background:rgba(0, 0, 0, 0) url("/images/ivr/bg.jpg") repeat scroll 0 0;
+  color: #00BFFF;
+  position: fixed;
+  bottom: 0;
+  left: 100px;
+  right: 0;
+  width: calc(100% - 100px);
+  height: 100%;
+  top: 0;
+  float: right;
+  display: block;
+}
+
+
+.diagram {
+  width: 100%;
+  position: absolute;
+}
+
+
+
+

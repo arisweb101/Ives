@@ -1,0 +1,234 @@
+@mixin boxshadow($bshadow) {
+	-webkit-box-shadow: boxshadow($bshadow);
+	-moz-box-shadow: boxshadow($bshadow);
+	box-shadow: boxshadow($bshadow);
+}
+@mixin rotate($degrees) {
+    -webkit-transform: rotate($degrees);
+    -moz-transform: rotate($degrees);
+    -ms-transform: rotate($degrees);
+    -o-transform: rotate($degrees);
+    transform: rotate($degrees);
+    -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=#{cos($degrees)}, M12=#{-1*sin($degrees)}, M21=#{sin($degrees)}, M22=#{cos($degrees)})";
+    filter:  progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=#{cos($degrees)}, M12=#{-1*sin($degrees)}, M21=#{sin($degrees)}, M22=#{cos($degrees)});
+}
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
+}
+
+@mixin txt-prop() {
+	 padding:0 10px;
+	 background:#fff;
+	 border:none;
+	 border-bottom:1px solid #ddd;
+	 margin-bottom:10px;
+	 width:100%;
+	 height: 40px;
+     margin-bottom: 10px;
+     padding: 10px  0;
+     clear:both;
+     display: block;
+     font-size: 16px;
+     color:#919191;
+}
+
+// Fonts
+@mixin font-light() {
+	font-family: 'proxima_novalight';
+}
+
+@mixin font-regular() {
+	 font-family: 'proxima_nova_rgregular';
+}
+
+@mixin semi-bold() {
+	 font-family: 'proxima_novasemibold';
+}
+
+@mixin bold() {
+    font-family: 'proxima_nova_rgbold';
+}
+
+// Buttons
+@mixin blue-bt() {
+	background:#148ece;
+	@include border-radius(5px);
+	padding:10px;
+	text-align:center;
+	color:#fff;
+	font-size:16px;
+	font-weight:bold;
+	border:none;
+	margin:25px auto;
+	height:50px;
+	font-weight:300;
+	border-bottom:2px solid #ddd;
+
+	&:hover {
+		background:#137cb3;
+	}
+}
+
+
+@mixin blue-bt-rad() {
+	background:#148ece;
+	@include border-radius(30px);
+	text-align:center;
+	color:#fff;
+    font-size: 14px;
+    height: 28px;
+    line-height: 20px;
+    padding: 5px 25px;
+    text-align: center;
+    border:none;
+
+	&:hover {
+		background:#137cb3;
+	}
+}
+
+@mixin trans-br-bt() {
+	background-color:#fff;
+	padding:10px;
+	@include border-radius(5px);
+	padding:10px 40px;
+	text-align:center;
+	color:#8c8c8c;
+	font-size:16px;
+	font-weight:bold;
+	border:none;
+	border-bottom:2px solid #ddd;
+	height:50px;
+	margin:25px auto;
+	width:100%;
+	font-weight:300; 
+	line-height:30px;
+
+	&:hover, &:focus {
+		color:#999;
+		background:#e5e5e5 none repeat scroll 0 0;
+	}
+
+}
+
+@mixin trans-bt() {
+	background:none;
+	background-color:none;
+	padding:10px;
+	@include border-radius(30px);
+	padding:10px 40px;
+	border:1px solid #fff;
+	text-align:center;
+	color:#fff;
+	font-size:14px;
+
+	&:hover, &:focus {
+		background:none;
+		border:1px solid #fff;
+	}
+}
+
+
+@mixin check-sm {
+
+	input[type=checkbox] {
+    display:none;
+    cursor:pointer;
+	}
+
+}
+
+@mixin forms {
+
+	form {
+
+		input[type='text'] {
+		@include txt-prop();
+		width:100%;
+		background:none;
+		margin-bottom: 25px;
+		}
+		.blue-bt {
+		@include blue-bt();
+		width:100%;
+		}
+		a {
+		color:#148ece;
+		text-decoration: none;
+
+		&:hover {
+		color:#53b1e3;
+		}
+		}
+
+		.terms {
+		a {
+		font-size:12px;
+		color:#929292;
+		text-decoration: none;
+
+		&:hover {
+		color:#53b1e3;
+		}	
+		}
+		}
+
+		.g-icon {
+
+		position:relative;
+		top:-3px;
+
+		img {
+		width:28px;
+		display: inline-block;
+		margin-right: 20px;
+		}
+		}
+
+		label {
+			font-size: 11px;
+			color:#9e9e9e;
+			clear:both;
+			display: block;
+			font-weight: normal;
+		}
+		.blue-title {
+			color:#148ece;
+			font-size: 16px;
+			margin-bottom:30px;
+		}
+
+		.txt-field {
+			margin:0 20px 0 0;
+			width:45%;
+		}
+
+		.txt-add {
+			margin:0 20px 0 0;
+			width:55%;
+		}
+		}
+
+		input[type=checkbox] + label {
+		display:inline-block;
+		padding: 0 0 0 0px;
+		background:url("/images/main/check-sm.png") no-repeat;
+		cursor: pointer;
+		font-weight: 300;
+		color:#b8b8b8;
+		font-size: 13px;
+		text-indent: 20px;
+		}
+
+		input[type=checkbox]:checked + label {
+		background:url("/images/main/checked-sm.png") no-repeat;
+		display:inline-block;
+		cursor: pointer;
+		}
+		
+	}
+
+
