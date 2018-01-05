@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>IVES - Dashboard</title>
+  <!-- Tell the browser to be responsive to screen width -->
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+  <!-- Bootstrap 3.3.6 -->
+  <link rel="stylesheet" href="assets/components/themes/bootstrap/css/bootstrap.css">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
+  <!-- Ionicons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+
+  <link rel="stylesheet" href="assets/components/themes/dist/css/AdminLTE.css">
+  <link rel="stylesheet" href="assets/components/themes/dist/css/skins/skin-blue.css">
+
+  <link rel="stylesheet" href="app.css">
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+</head>
+<body class="hold-transition skin-blue sidebar-mini">
+  <div class="wrapper profile">
+    <!-- Header -->
+    <!-- Main Header -->
+    <header class="main-header ">
+      <!-- Logo -->
+      <!--<div class="logo">
+        <span class="logo-mini">IVES</span>
+        <span class="logo-lg"><a href="/"><img src="images/logo.png" width="60" ><b class="logo-txt">PROJECT IVES</b></a></span>
+      </div>
+      <!-- Header Navbar -->
+      <nav class="navbar navbar-static-top" role="navigation">
+        <!-- Sidebar toggle button-->
+        <a href="#" class="sidebar-toggle" data-toggle="" role="button">
+          <span class="sr-only">Toggle navigation</span>
+        </a>
+        <span class="adminTitle">My Profile</span>
+        <!-- Navbar Right Menu -->
+        <div class="navbar-custom-menu">
+          <div class="col-md-1"><img src="images/main/Settings.svg" width="22"> </div> 
+          <div class="col-md-1"><img src="images/main/SettingsDropdown.svg" width="10"></div> 
+        </div>
+      </nav>
+    </header>
+    <!-- Sidebar -->
+    <!-- <aside class="main-sidebar">
+      <section class="sidebar">
+        <div class="user-panel">
+          <div class="text-center image">
+            <img src="assets/components/themes/dist/img/user2-160x160.jpg") }}" class="img-circle" alt="User Image" />
+          </div>
+          <div class="text-center info">
+            <p>John Vincent</p>
+             <a href="my-profile.html">Edit Profile</a>
+          </div>
+        </div>
+        <div class="clear">
+          <ul class="sidebar-menu tree" data-widget="tree"">
+            <li><a href="/admin" class="dashboard-menu"><div class="icon"></div><span>Dashboard</span></a></li>
+            <li class="treeview">
+              <a href="#" class="ivr-menu">
+                <div class="icon"></div>
+                <span>IVR Campaign</span>
+                <i class="fa fa-angle-left pull-right"></i>
+              </a>
+              <ul class="treeview-menu">
+                <li><a href="/ivr-campaign" class="admin-menu">Campaigns</a></li>
+                <li><a href="/ivr-tree">IVR Tree</a></li>
+              </ul>
+            </li>
+            <li class="treeview">
+              <a href="#" class="reports-menu">
+                <div class="icon"></div>
+                <span>Reports</span>
+                <i class="fa fa-angle-left pull-right"></i>
+              </a>
+              <ul class="treeview-menu">
+                <li><a href="/call-summary">Call Summary</a></li>
+                <li><a href="/selected-option">Selected Option</a></li>
+                <li><a href="/sms-summary">SMS Summary</a></li>
+              </ul>
+            </li>
+            <li class="treeview">
+              <a href="#" class="plan-menu">
+                <div class="icon"></div>
+                <span>Plan Settings</span>
+                <i class="fa fa-angle-left pull-right"></i>
+              </a>
+              <ul class="treeview-menu">
+                <li><a href="#">Setting 1</a></li>
+                <li><a href="#">Setting 2</a></li>
+              </ul>
+            </li>
+            <li class="treeview">
+              <a href="#" class="admin-menu">
+                <div class="icon"></div>
+                <span>Admin</span>
+                <i class="fa fa-angle-left pull-right"></i>
+              </a>
+              <ul class="treeview-menu">
+                <li><a href="/accounts" class="admin-menu">Accounts</a></li>
+                <li><a href="/campaigns">Campaigns</a></li>
+                <li><a href="/user-plan">User Plan</a></li>
+                <li><a href="caller-ids">Caller IDs</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </aside>
+  -->
+
+    <div class="content-wrapper" id="app">
+
+      <div class="box box-solid box-default ">
+        <div class="box-body profile">
+          <div class="col-md-4 text-right">
+            <div class="change-photo">
+              <div class="user-panel">
+                <div class="text-center image">
+                  <img src="assets/components/themes/dist/img/user2-160x160.jpg" class="img-circle" alt="User Image" />
+                </div>
+                <div class="text-center info">
+                  <!--<p>John Vincent</p>-->
+                  <!-- Status -->
+                  <a href="#">Change Photo</a>
+                </div>
+              </div>
+
+            </div>
+          </div>
+          <div class="col-md-8">
+            <!-- Modal -->
+            <div id="profile-setup" role="dialog">
+
+              <div class="modal-dialog">
+                <!-- Modal content-->
+                <div class="modal-content">
+                  <div class="modal-body">
+                    <form action="">
+                      <div class="col-md-12">
+                        <div class="row">
+                          <h2 class="blue-title">Basic Details</h2>
+
+                          <div class="col-md-6 nopadding txt-field">
+                            <label>First Name</label><input type="text" placeholder="John Vincent" value="">
+                          </div>
+                          <div class="col-md-6 nopadding txt-field">
+                            <label>Last Name</label><input type="text" placeholder="Doe" value="">
+                          </div>
+                          <div class="col-md-6 nopadding txt-field">
+                            <label>Email</label><input type="text" placeholder="johndoe@gmail.com" value="">
+                          </div>
+                          <div class="col-md-6 nopadding txt-field">
+                            <label>Mobile No.</label><input type="text" placeholder="+63 9172345678" value="">
+                          </div>           
+                        </div>
+                        <div class="row">
+                          <h2 class="blue-title">Company Details</h2>
+
+                          <div class="col-md-6 nopadding txt-field">
+                            <input type="text" placeholder="Designation" value="">
+                          </div>
+                          <div class="col-md-6 nopadding txt-field">
+                            <input type="text" placeholder="Company" value="">
+                          </div>
+                          <div class="col-md-8 nopadding txt-add">
+                            <input type="text" placeholder="Company Address" value="">
+                          </div>
+                          <div class="col-md-4 nopadding">
+                            <input type="text" placeholder="Industry" value="">
+                          </div>  
+                        </div>
+                        <div class="row">
+                          <h2 class="blue-title">Password</h2>
+                          <div class="col-md-6 nopadding txt-field">
+                            <input type="text" placeholder="******" value="">
+                          </div>
+                        </div>
+                        <div class="row text-left">
+                          <button type="button" class="trans-br-bt cancel">Cancel</button>
+                          <button type="button" class="blue-bt save">Save Profile</button>
+                        </div>   
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- /.content-wrapper -->
+
+    <!-- Footer -->
+
+  </div>
+  <!-- ./wrapper -->
+
+  <!-- REQUIRED JS SCRIPTS -->
+
+  <!-- jQuery 2.2.3 -->
+  <script src="assets/components/themes//plugins/jQuery/jquery-2.2.3.min.js"></script>
+  <script src="assets/components/themes/bootstrap/js/bootstrap.min.js"></script>
+  <script src="asset/js/app.js"></script>
+  <script src="asset/js/init.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/components/themes/dist/js/app.min.js"></script>
+</body>
+</html>

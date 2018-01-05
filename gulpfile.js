@@ -1,8 +1,8 @@
 var gulp = require('gulp');
 var sass = require('gulp-sass');
 
-var input = './assets/scss/*.scss';
-var output = './assets/css';
+var input = './assets/sass/*.scss';
+var output = './';
 
 gulp.task('sass', function () {
   return gulp

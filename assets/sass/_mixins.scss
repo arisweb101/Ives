@@ -215,7 +215,7 @@
 		input[type=checkbox] + label {
 		display:inline-block;
 		padding: 0 0 0 0px;
-		background:url("/images/main/check-sm.png") no-repeat;
+		background:url("images/main/check-sm.png") no-repeat;
 		cursor: pointer;
 		font-weight: 300;
 		color:#b8b8b8;
@@ -224,7 +224,7 @@
 		}
 
 		input[type=checkbox]:checked + label {
-		background:url("/images/main/checked-sm.png") no-repeat;
+		background:url("images/main/checked-sm.png") no-repeat;
 		display:inline-block;
 		cursor: pointer;
 		}

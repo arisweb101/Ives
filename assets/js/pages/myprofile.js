@@ -1,0 +1,1 @@
+Vue.component('my-profile', require( '../components/admin/my-profile.vue' )); 

@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>IVES - Dashboard</title>
+	<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+	<!-- Bootstrap 3.3.6 -->
+	<link rel="stylesheet" href="assets/components/themes/bootstrap/css/bootstrap.css">
+	<!-- Font Awesome -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
+	<!-- Ionicons -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+	<link rel="stylesheet" href="assets/components/themes/dist/css/AdminLTE.css">
+	<link rel="stylesheet" href="assets/components/themes/dist/css/skins/skin-blue.css">
+	<link rel="stylesheet" href="app.css">
+	<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+<![endif]-->
+</head>
+<body class="hold-transition skin-blue sidebar-mini">
+	<!-- MODALS -->
+	<!-- ASSIGNED DTMF -->
+	<div id="dtmf-modal" class="modal fade ivr" role="dialog">
+		<div class="modal-dialog">
+			<!-- Modal content-->
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" data-dismiss="modal" class="close">
+						<img src="images/ivr/close.png" width="20">
+					</button>
+					<h4 class="modal-title">Add Assigned DTMF</h4>
+				</div>
+				<div class="modal-body">
+					<form action="">
+						<div class="group-layer">
+							<div class="ivr-titles">Title</div>
+							<input type="text" placeholder="" value="Sample Menu 1">
+						</div>
+						<div class="group-layer">
+							<div class="ivr-titles">Message</div>
+							<textarea placeholder="Enter Message"></textarea>
+						</div>
+						<div class="row text-left">
+							<button type="button" class="trans-br-bt cancel" data-dismiss="modal">Cancel</button>
+							<button type="button" class="blue-bt add" id="add-dtmf" data-dismiss="modal">Add</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- SOUND CLIP -->
+	<div id="soundclip-modal" class="modal fade ivr" role="dialog">
+		<div class="modal-dialog">
+			<!-- Modal content-->
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" data-dismiss="modal" class="close">
+						<img src="images/ivr/close.png" width="20">
+					</button>
+					<h4 class="modal-title">Add Soundclip</h4>
+				</div>
+				<div class="modal-body">
+					<form action="">
+						<div class="group-layer">
+							<div class="ivr-titles">Title</div>
+							<input type="text" placeholder="" value="Sample Soundclip 1">
+						</div>
+						<div class="group-layer">
+							<div class="ivr-titles">MP3 File</div>
+							<div class="form-group">
+								<input name="img[]" class="file" type="file">
+								<div class="input-group">
+									<input disabled="disabled" value="" class="form-control upload input-lg" placeholder="Choose File..." type="text"> 
+									<span class="input-group-btn"><button type="button" class="browse btn input-lg">Upload</button></span>
+								</div>
+							</div>
+						</div>
+						<div class="row text-left">
+							<button type="button" class="trans-br-bt cancel" data-dismiss="modal">Cancel</button>
+							<button type="button" class="blue-bt add" id="add-sound" data-dismiss="modal">Add</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- TEXT TO SPEECH -->
+	<div id="ttspeech-modal" class="modal fade ivr" role="dialog">
+		<div class="modal-dialog">
+			<!-- Modal content-->
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" data-dismiss="modal" class="close">
+						<img src="images/ivr/close.png" width="20">
+					</button>
+					<h4 class="modal-title">Add Text-to-Speech</h4>
+				</div>
+				<div class="modal-body">
+					<form action="">
+						<div class="group-layer">
+							<div class="ivr-titles">Title</div>
+							<input type="text" placeholder="" value="Sample Text-to-Speech 1">
+						</div>
+						<div class="group-layer">
+							<div class="ivr-titles">Message</div>
+							<textarea placeholder="Enter Message"></textarea>
+						</div>
+						<div class="row text-left">
+							<button type="button" class="trans-br-bt cancel" data-dismiss="modal">Cancel</button>
+							<button type="button" class="blue-bt add" id="add-ttspeech" data-dismiss="modal">Add</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<!-- VARIABLE -->
+	<div id="variable-modal" class="modal fade ivr" role="dialog">
+		<div class="modal-dialog">
+			<!-- Modal content-->
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" data-dismiss="modal" class="close">
+						<img src="images/ivr/close.png" width="20">
+					</button>
+					<h4 class="modal-title">Add Variable</h4>
+				</div>
+				<div class="modal-body">
+					<form action="">
+						<div class="group-layer">
+							<div class="ivr-titles">Title</div>
+							<input type="text" placeholder="" value="Customer Name">
+						</div>
+						<div class="group-layer">
+							<div class="ivr-titles">Variable</div>
+							<input type="text" class="form-control" placeholder="Name" aria-describedby="basic-addon1">
+						</div>
+						<div class="row text-left">
+							<button type="button" class="trans-br-bt cancel" data-dismiss="modal">Cancel</button>
+							<button type="button" class="blue-bt add">Add</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- REPEAT IVR -->
+	<div id="repeativr-modal" class="modal fade ivr" role="dialog">
+		<div class="modal-dialog">
+			<!-- Modal content-->
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" data-dismiss="modal" class="close">
+						<img src="images/ivr/close.png" width="20">
+					</button>
+					<h4 class="modal-title">Add Assigned DTMF</h4>
+				</div>
+				<div class="modal-body">
+					<form action="">
+						<div class="group-layer">
+							<div class="ivr-titles">Title</div>
+							<input type="text" placeholder="" value="Sample Menu 1">
+						</div>
+						<div class="group-layer">
+							<div class="ivr-titles">Message</div>
+							<textarea placeholder="Enter Message"></textarea>
+						</div>
+						<div class="row text-left">
+							<button type="button" class="trans-br-bt cancel" data-dismiss="modal">Cancel</button>
+							<button type="button" class="blue-bt add">Add</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<!-- TRANSFER CALL -->
+	<div id="transfercall-modal" class="modal fade ivr" role="dialog">
+		<div class="modal-dialog">
+			<!-- Modal content-->
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" data-dismiss="modal" class="close">
+						<img src="images/ivr/close.png" width="20">
+					</button>
+					<h4 class="modal-title">Add Transfer Call</h4>
+				</div>
+				<div class="modal-body">
+					<form action="">
+						<div class="group-layer">
+							<div class="ivr-titles">Title</div>
+							<input type="text"  class="form-control"  placeholder="" value="Transfer to Billing">
+						</div>
+						<div class="group-layer">
+							<div class="ivr-titles">Number</div>
+							<div class="input-group">
+								<span class="input-group-addon" id="basic-addon1">+63</span>
+								<input type="text" class="form-control" placeholder="" aria-describedby="basic-addon1">
+							</div>
+						</div>
+						<div class="row text-left">
+							<button type="button" class="trans-br-bt cancel" data-dismiss="modal">Cancel</button>
+							<button type="button" class="blue-bt add" id="add-tc" data-dismiss="modal">Add</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- SEND SMS -->
+	<div id="sendsms-modal" class="modal fade ivr" role="dialog">
+		<div class="modal-dialog">
+			<!-- Modal content-->
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" data-dismiss="modal" class="close">
+						<img src="images/ivr/close.png" width="20">
+					</button>
+					<h4 class="modal-title">Add Send SMS</h4>
+				</div>
+				<div class="modal-body">
+					<form action="">
+						<div class="group-layer">
+							<div class="ivr-titles">Title</div>
+							<input type="text" placeholder="Title" value="">
+						</div>
+						<div class="group-layer">
+							<div class="ivr-titles">Message</div>
+							<textarea placeholder="Enter Message"></textarea>
+						</div>
+						<div class="row text-left">
+							<button type="button" class="trans-br-bt cancel" data-dismiss="modal">Cancel</button>
+							<button type="button" class="blue-bt add" id="add-sms" data-dismiss="modal">Add</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<!-- DROP CALL -->
+	<div id="dropcall-modal" class="modal fade ivr" role="dialog">
+		<div class="modal-dialog">
+			<!-- Modal content-->
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" data-dismiss="modal" class="close">
+						<img src="images/ivr/close.png" width="20">
+					</button>
+					<h4 class="modal-title">Add Assigned DTMF</h4>
+				</div>
+				<div class="modal-body">
+					<form action="">
+						<div class="ivr-titles">Title</div>
+						<input type="text" placeholder="" value="Sample Menu 1">
+						<div class="ivr-titles">Message</div>
+						<textarea placeholder="Enter Message"></textarea>
+						<div class="row text-left">
+							<button type="button" class="trans-br-bt cancel" data-dismiss="modal">Cancel</button>
+							<button type="button" class="blue-bt add">Add</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- END MODALS -->
+
+	<div class="ivr-wrapper">
+
+		<!-- Main Header -->
+		<header class="ivr-main-header">
+
+			<!-- Logo -->
+			<div class="logo col-md-1 nopadding text-center">
+				<span class="logo-mini "><img src="images/logo.png" width="50"></span>
+			</div>
+			<span class="back-mini">
+				<a href="dashboard.html"><img src="images/ivr/BackArrow.svg" width="18"></a>
+			</span>
+			<div class="versioning col-md-8">
+				<span class="ivr-tree">IVR Tree</span>
+				<span class="header-titles">Version</span>
+				<span class="version-name">44.1</span>
+				<span class="snippet"></span>
+				<span class="header-titles">Load</span>
+				<span class="version-name">Editing: Version 44.1 *Latest</span>
+				<button class="blue-bt-rad">Save</button>
+			</div>
+			<div class="col-md-2 ivr-list nopadding ">
+				<button class="dropdown-toggle" type="button" data-toggle="dropdown">IVR List
+					<span class="listview"></span>
+				</button>
+				<div class="dropdown-menu">
+					<ul>
+						<li><a href="#">HTML</a></li>
+						<li><a href="#">CSS</a></li>
+						<li><a href="#">JavaScript</a></li>
+					</ul>
+				</div>
+			</div>
+		</header>
+
+		<aside class="ivr-main-sidebar">
+
+			<!-- sidebar: style can be found in sidebar.less -->
+
+			<ul class="tree-items">
+
+				<li >
+					<!--<a id="adtmf">-->
+						<a data-toggle="modal" data-target="#dtmf-modal" onclick="return false;">
+							<span class="tree-icons"><img id="dtmf" src="images/ivr/AssignedDTMF.svg" alt=""></span>
+							<span class="t-i-names">Assigned DTMF</span>
+						</a>
+					</li>
+					<li id="sc">
+						<a href="" data-toggle="modal" data-target="#soundclip-modal" onclick="return false;">
+							<span class="tree-icons"><img src="images/ivr/SoundClip.svg" alt=""></span>
+							<span class="t-i-names">SoundClip</span>
+						</a>
+					</li>
+					<li>
+						<a data-toggle="modal" data-target="#ttspeech-modal"  onclick="return false;">
+							<span class="tree-icons"><img src="images/ivr/TextToSpeech.svg" alt=""></span>
+							<span class="t-i-names">Text-to-Speech</span>
+						</a>
+					</li>
+					<li id="var">
+						<a href="" data-toggle="modal" data-target="#variable" onclick="return false;">
+							<span class="tree-icons"><img src="images/ivr/Variable.svg" alt=""></span>
+							<span class="t-i-names">Variable</span>
+						</a>
+					</li>
+					<li id="rivr">
+						<a href="" data-toggle="modal" data-target="#repeativr" onclick="return false;">
+							<span class="tree-icons"><img src="images/ivr/RepeatIVR.svg" alt=""></span>
+							<span class="t-i-names">Repeat IVR</span>
+						</a>
+					</li>
+					<li>
+						<a href="" data-toggle="modal" data-target="#transfercall-modal" onclick="return false;">
+							<span class="tree-icons"><img src="images/ivr/TransferCall.svg" alt=""></span>
+							<span class="t-i-names">Transfer Call</span>
+						</a>
+					</li>
+					<li id="ssms">
+						<a href="" data-toggle="modal" data-target="#sendsms-modal" onclick="return false;">
+							<span class="tree-icons"><img src="images/ivr/SendSMS.svg" alt=""></span>
+							<span class="t-i-names">Send SMS</span>
+						</a>
+					</li>
+					<li id="dc">
+						<a href="" data-toggle="modal" data-target="#dropcall" onclick="return false;">
+							<span class="tree-icons"><img src="images/ivr/DropCall.svg" alt=""></span>
+							<span class="t-i-names">Drop Call</span>
+						</a>
+					</li>
+				</ul>
+
+				<!-- /.sidebar -->
+			</aside>
+
+			<div class="ivr-content-wrapper" id="app">
+				<div class="drop-container">
+					<div class="panzoom">
+						<div class="diagram">
+							<div id="start"><img src="images/ivr/startCall.png" alt="" ></div>
+							<ivr-features></ivr-features>
+						</div>
+					</div>
+				</div>
+			</div><!-- /.content-wrapper -->
+		</div>
+
+		<script src="assets/js/app.js"></script>
+
+		<!-- Bootstrap 3.3.6 -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<script src="assets/components/themes/dist/js/app.min.js"></script>
+		<!-- Pan Zoom and JSPlumb-->
+		<script src="assets/components/jquery.panzoom/dist/js/jquery.panzoom.js"></script>
+		<script src="assets/components/jquery.panzoom/dist/js/jquery.mousewheel.js"></script>
+		<script src="assets/components/jsplumb/dist/js/jsplumb.min.js"></script>
+		<script src="assets/components/jquery.panzoom/dist/js/dagre.min.js"></script>
+		<script src="assets/js/ivr.js"></script>
+		<script src="assets/js/main.js"></script>
+	</body>
+	</html>

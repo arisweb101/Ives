@@ -1,6 +1,6 @@
 body, html {
 	font-family: 'proxima_nova_rgregular';
-	background: url(/images/Background.svg) no-repeat center center fixed; 
+	background: url(images/Background.svg) no-repeat center center fixed; 
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
@@ -10,9 +10,9 @@ body, html {
 }
 
 // Variales
+@import "fonts";
 @import "variables";
 @import "mixins";
-@import "fonts";
 @import "custom";
 @import "home";
 @import "modal";

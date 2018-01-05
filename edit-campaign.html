@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>IVES - Edit Campaign</title>
+  <!-- Tell the browser to be responsive to screen width -->
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+  <!-- Bootstrap 3.3.6 -->
+  <link rel="stylesheet" href="assets/components/themes/bootstrap/css/bootstrap.css">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
+  <!-- Ionicons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+  <link rel="stylesheet" href="assets/components/themes/dist/css/AdminLTE.css">
+  <link rel="stylesheet" href="assets/components/themes/dist/css/skins/skin-blue.css">
+  <link rel="stylesheet" href="app.css">
+  <link rel="stylesheet" href="assets/components/datetimepicker/build/css/bootstrap-datetimepicker.min.css" />
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+</head>
+<body class="hold-transition skin-blue sidebar-mini">
+  <div class="wrapper">
+    <!-- Header -->
+    <!-- Main Header -->
+    <header class="main-header">
+      <!-- Logo -->
+      <div class="logo">
+        <!-- mini logo for sidebar mini 50x50 pixels -->
+        <span class="logo-mini">IVES</span>
+        <!-- logo for regular state and mobile devices -->
+        <span class="logo-lg"><a href="/"><img src="images/logo.png" width="60" ><b class="logo-txt">PROJECT IVES</b></a></span>
+      </div>
+      <!-- Header Navbar -->
+      <nav class="navbar navbar-static-top" role="navigation">
+        <!-- Sidebar toggle button-->
+        <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
+          <span class="sr-only">Toggle navigation</span>
+        </a>
+        <span class="adminTitle">Admin</span>
+        <!-- Navbar Right Menu -->
+        <div class="navbar-custom-menu">
+          <div class="col-md-1"><img src="images/main/Settings.svg" width="22"> </div> 
+          <div class="col-md-1"><img src="images/main/SettingsDropdown.svg" width="10"></div> 
+        </div>
+      </nav>
+    </header>
+    <!-- Sidebar -->
+    <aside class="main-sidebar">
+      <section class="sidebar">
+        <div class="user-panel">
+          <div class="text-center image">
+            <img src="assets/components/themes/dist/img/user2-160x160.jpg") }}" class="img-circle" alt="User Image" />
+          </div>
+          <div class="text-center info">
+            <p>John Vincent</p>
+            <!-- Status -->
+            <a href="my-profile.html">Edit Profile</a>
+          </div>
+        </div>
+
+        <!-- Sidebar Menu -->
+        <div class="clear">
+          <ul class="sidebar-menu tree" data-widget="tree"">
+            <li><a href="dashboard.html" class="dashboard-menu"><div class="icon"></div><span>Dashboard</span></a></li>
+            <li class="treeview">
+              <a href="#" class="ivr-menu">
+                <div class="icon"></div>
+                <span>IVR Campaign</span>
+                <i class="fa fa-angle-left pull-right"></i>
+              </a>
+              <ul class="treeview-menu">
+                <li><a href="ivr-campaign.html" class="admin-menu">Campaigns</a></li>
+                <li><a href="ivr-tree.html">IVR Tree</a></li>
+              </ul>
+            </li>
+            <li class="treeview">
+              <a href="#" class="reports-menu">
+                <div class="icon"></div>
+                <span>Reports</span>
+                <i class="fa fa-angle-left pull-right"></i>
+              </a>
+              <ul class="treeview-menu">
+                <li><a href="call-summary.html">Call Summary</a></li>
+                <li><a href="selected-option.html">Selected Option</a></li>
+                <li><a href="sms-summary.html">SMS Summary</a></li>
+              </ul>
+            </li>
+            <li class="treeview">
+              <a href="#" class="plan-menu">
+                <div class="icon"></div>
+                <span>Plan Settings</span>
+                <i class="fa fa-angle-left pull-right"></i>
+              </a>
+              <ul class="treeview-menu">
+                <li><a href="#">Setting 1</a></li>
+                <li><a href="#">Setting 2</a></li>
+              </ul>
+            </li>
+            <li class="treeview">
+              <a href="#" class="admin-menu">
+                <div class="icon"></div>
+                <span>Admin</span>
+                <i class="fa fa-angle-left pull-right"></i>
+              </a>
+              <ul class="treeview-menu">
+                <li><a href="accounts.html" class="admin-menu">Accounts</a></li>
+                <li><a href="campaigns-admin.html">Campaigns</a></li>
+                <li><a href="user-plan.html">User Plan</a></li>
+                <li><a href="caller-ids.html">Caller IDs</a></li>
+              </ul>
+            </li>
+          </ul><!-- /.sidebar-menu -->
+        </div>
+      </section>
+      <!-- /.sidebar -->
+    </aside>
+
+    <div class="content-wrapper" id="app">
+      <div class="row">
+        <section class="content-header">
+          <h2 class="col-md-5 pull-text">Settings</h2>
+        </section>
+        <section>
+          <div class="admsettings info-box">
+            <div class="setfield col-md-8"> 
+              <div class="col-md-3 nopadding fd-left">Campaign Name</div>
+              <div class="col-md-3 nopadding"><input type="text" placeholder="" value="Bill Reminder"> </div>
+              <div class="clear"></div>
+            </div>
+            <div class="setfield col-md-8">
+              <div class="col-md-3 nopadding fd-left">Service Type</div>
+              <div class="col-md-3 nopadding">
+                <div class="ch-list">
+                  <input type="checkbox" checked name="sms" id="sms" value="">
+                  <label for="sms">SMS</label>
+                </div>
+                <div class="ch-list">
+                  <input type="checkbox" name="voice" id="voice" value="">
+                  <label for="voice">Voice</label>
+                </div>
+              </div>
+              <div class="clear"></div>
+            </div>
+            <div class="setfield col-md-8">
+              <div class="col-md-3 nopadding fd-left">Brand Participation</div>
+              <div class="col-md-3 nopadding">
+                <div class="ch-list">
+                  <input type="checkbox" checked name="sms" id="sms" value="">
+                  <label for="sms">Globe</label>
+                </div>
+                <div class="ch-list">
+                  <input type="checkbox"  name="tm" id="tm" value="">
+                  <label for="tm">TM</label>
+                </div>
+                <div class="ch-list">
+                  <input type="checkbox" name="smart" id="smart" value="">
+                  <label for="smart">Smart</label>
+                </div>
+                <div class="ch-list">
+                  <input type="checkbox" name="sun" id="sun" value="">
+                  <label for="sun">Sun</label>
+                </div>
+              </div>
+              <div class="col-md-3 nopadding">
+                <div class="ch-list">
+                  <input type="checkbox"  name="g-landline" id="g-landline" value="">
+                  <label for="g-landline">Globe Landline</label>
+                </div>
+                <div class="ch-list">
+                  <input type="checkbox"  name="s-landline" id="s-landline" value="">
+                  <label for="s-landline">Smart Landline</label>
+                </div>
+                <div class="ch-list">
+                  <input type="checkbox" name="b-landline" id="b-landline" value="">
+                  <label for="b-landline">Bayantel Landline</label>
+                </div>
+              </div>
+              <div class="clear"></div>
+            </div>
+            <div class="setfield col-md-8">
+              <div class="col-md-3 nopadding fd-left">Short Code</div>
+              <div class="col-md-3 nopadding">487035083</div>
+              <div class="clear"></div>
+            </div>
+            <div class="setfield col-md-8">
+              <div class="col-md-3 nopadding fd-left">Call Volume</div>
+              <div class="col-md-3 nopadding"><input type="text" placeholder="" value=""> </div>     
+              <div class="clear"></div>
+            </div>
+          </div>
+        </section>
+        <section class="content-header">
+          <h2 class="col-md-5 pull-text">Schedule</h2>
+        </section>
+        <section>
+          <div class="admsettings info-box">
+            <div class="setfield-nobr col-md-8">
+              <div class="col-md-2 nopadding fd-left">Time</div>
+              <div class="col-md-2 nopadding">
+                <div class="col-sm-6 nopadding">
+                  <div class="form-group">
+                    <div class='input-group date' id='time'>
+                      <input type='text' class="form-control time" />
+                      <span class="input-group-addon time-icon" >
+                        <span class="glyphicon"><img src="images/main/time-arrow.png" width="20"></span>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+              <div class="clear"></div>
+            </div>
+            <div class="setfield-nobr col-md-8 nopadding">
+              <div class="col-md-2 nopadding fd-left">Date</div>
+              <div class="dateto col-md-10 nopadding">
+                <div class="col-md-4 nopadding">
+                  <div class="form-group">
+                    <div class="input-group date" id="datefrom">
+                      <input type='text' class="date-field form-control" />
+                      <span class="input-group-addon calendar-icon">
+                        <span class="glyphicon "><img src="images/main/calendar.svg" alt="" width="14"></span>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-1 nopadding text-center to">To</div>
+                <div class="col-md-4 nopadding">
+                  <div class="form-group">
+                    <div class='input-group date' id='dateto'>
+                      <input type='text' class="date-field form-control" />
+                      <span class="input-group-addon calendar-icon">
+                        <span class="glyphicon calendar-icon"><img src="images/main/calendar.svg" width="14" alt=""></span>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="clear"></div>
+              <div class="setfield-nobr col-md-8 nopadding">
+                <div class="col-md-2 nopadding fd-left">&nbsp;</div>
+                <div class="col-md-3 nopadding">
+                  <div class="ch-list">
+                    <input type="checkbox" checked name="monday" id="monday" value="">
+                    <label for="monday">Monday</label>
+                  </div>
+                  <div class="ch-list">
+                    <input type="checkbox"  name="tue" id="tuesday" value="">
+                    <label for="tuesday">Tuesday</label>
+                  </div>
+                  <div class="ch-list">
+                    <input type="checkbox" name="wed" id="wednesday" value="">
+                    <label for="wednesday">Wednesday</label>
+                  </div>
+                  <div class="ch-list">
+                    <input type="checkbox" name="thursday" id="thursday" value="">
+                    <label for="thursday">Thursday</label>
+                  </div>
+                  <div class="ch-list">
+                    <input type="checkbox" name="friday" id="friday" value="">
+                    <label for="friday">Friday</label>
+                  </div>
+                </div>
+                <div class="col-md-3 nopadding">
+                  <div class="ch-list">
+                    <input type="checkbox" name="saturday" id="saturday" value="">
+                    <label for="saturday">Saturday</label>
+                  </div>
+                  <div class="ch-list">
+                    <input type="checkbox" name="sunday" id="sunday" value="">
+                    <label for="sunday">Sunday</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="content-header">
+          <h2 class="col-md-5 pull-text">Upload CSV</h2>
+        </section>
+        <section>
+          <div class="admsettings info-box">
+            <div class="setfield-nobr col-md-8">
+              <div class="form-group">
+                <input type="file" name="img[]" class="file">
+                <div class="input-group col-md-5">
+                  <input type="text" class="form-control upload input-lg" disabled value="Choose File...">
+                  <span class="input-group-btn">
+                    <button class="browse btn input-lg" type="button">Upload</button>
+                  </span>
+                </div>
+                <div class="exceed">*file should not exceed 100mb</div>
+              </div>
+            </div>
+          </div>
+          <div class="row text-left admsettings">
+            <button type="button" class="trans-br-bt cancel">Cancel</button>
+            <button type="button" class="blue-bt save">Save</button></div>
+          </section>
+        </div>
+      </div><!-- /.content-wrapper -->
+    </div>
+    <!-- ./wrapper -->
+
+    <!-- REQUIRED JS SCRIPTS -->
+
+    <!-- jQuery 2.2.3 -->
+    <script src="assets/components/themes//plugins/jQuery/jquery-2.2.3.min.js"></script>
+    <script src="assets/components/themes/bootstrap/js/bootstrap.min.js"></script>
+    <!-- Added for Datepicker -->
+    <script src="assets/js/datepicker.js"></script>
+    <script type="text/javascript" src="assets/components/moment/min/moment.min.js"></script>
+    <script type="text/javascript" src="assets/components/datetimepicker/build/js/bootstrap-datetimepicker.min.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/components/themes/dist/js/app.min.js"></script>
+    <script type="text/javascript">
+       $(function () {
+         $('#time').datetimepicker({
+                    format: 'LT'
+               });
+        $('#datefrom').datetimepicker({
+            format: "MMMM DD,YYYY"
+        });
+        
+        $('#dateto').datetimepicker({
+            format: "MMMM DD,YYYY",
+            useCurrent: false //Important! See issue #1075
+          });
+        $("#datefrom").on("dp.change", function (e) {
+            $('#dateto').data("DateTimePicker").minDate(e.date);
+
+        });
+        $("#dateto").on("dp.change", function (e) {
+            $('#datefrom').data("DateTimePicker").maxDate(e.date);
+        });
+    });
+    </script>
+  </body>
+  </html>
