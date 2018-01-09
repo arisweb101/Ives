@@ -6550,7 +6550,7 @@ body {
       text-align: center !important;
       width: 115px !important; }
 
-menu-messagehtml,
+html,
 body {
   height: 100%;
   margin: 0px;
@@ -6753,6 +6753,8 @@ body {
     line-height: 26px;
     padding: 20px;
     width: 100%; }
+    .texttospeech .features-body .features-content, .mainmenu .features-body .features-content, .transfercall .features-body .features-content, .sendsms .features-body .features-content, .soundclip .features-body .features-content {
+      height: 165px; }
   .texttospeech .form-control, .mainmenu .form-control, .transfercall .form-control, .sendsms .form-control, .soundclip .form-control {
     height: 42px;
     z-index: 0; }

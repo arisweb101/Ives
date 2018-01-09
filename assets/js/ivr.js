@@ -308,14 +308,18 @@ $('body').on('click','#add-ttspeech', function(){
     '<span class="delete-icon"><a href="Javascript:void(0)" class="xicon delete"  title="Remove"><i class="fa fa-trash-o" aria-hidden="true"></i></span></a>' +
     '</span>' +
     '</div>' +
-    '<div class="features-body">' +
+    '<div class="features-body"><div class="features-content">' +
     '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum lobortis maximus neque, eget efficitur felis. Mauris molestie, nisl a sollicitudin iaculis, dui metus luctus ipsum, eu ultrices est sapien nec ipsum. Nulla augue tortor, pulvinar nec molestie id, fermentum non ex. Nulla facilisi. Fusce eget metus porttitor, molestie urna id, accumsan dui.</p>' +
+    '</div>' +
     '</div>' +
     '</div>'
     );
 
   tts_temp.appendTo('.diagram');
 
+  $(".features-content").mCustomScrollbar({
+        theme:"minimal-dark"
+  });
 
   $('body').on('click','#'+id_tts+' .delete', function () {
     jsPlumb.remove(id_tts);
@@ -406,14 +410,18 @@ $('body').on('click','#add-sms', function(){
     '<span class="delete-icon"><a href="Javascript:void(0)" class="xicon delete"  title="Remove"><i class="fa fa-trash-o" aria-hidden="true"></i></span></a>' +
     '</span>' +
     '</div>' +
-    '<div class="features-body">' +
+    '<div class="features-body"><div class="features-content">' +
     '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum lobortis maximus neque, eget efficitur felis. Mauris molestie, nisl a sollicitudin iaculis, dui metus luctus ipsum, eu ultrices est sapien nec ipsum. Nulla augue tortor, pulvinar nec molestie id, fermentum non ex. Nulla facilisi. Fusce eget metus porttitor, molestie urna id, accumsan dui.</p>' +
+    '</div>' +
     '</div>' +
     '</div>'
     );
 
   sms_temp.appendTo('.diagram');
 
+  $(".features-content").mCustomScrollbar({
+        theme:"minimal-dark"
+  });
 
   $('body').on('click','#'+id_sms+' .delete', function () {
     jsPlumb.remove(id_sms);
