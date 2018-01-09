@@ -65,6 +65,8 @@ var num = {
   connectorHoverStyle:{ lineWidth:1 },
 }
 
+
+// Zoom In Out
 var minScale = 0.4;
 var maxScale = 2;
 var incScale = 5;
@@ -147,17 +149,17 @@ jsPlumb.ready(function() {
     });
   });
 
-
-  jsPlumb.addEndpoint("start", { 
-    anchor : 'Bottom',
-    maxConnections: 1,
-  }, common)
-  jsPlumb.draggable(start);  
+// Start Button //
+jsPlumb.addEndpoint("start", { 
+  anchor : 'Bottom',
+  maxConnections: 1,
+}, common)
+jsPlumb.draggable(start);  
 });
 
 
 /** ADD DTMF **/
-$('body').on('click','#add-dtmf', function(){
+$('#add-dtmf').on('click', function(){
 
   var id_dtmf = "dtmf_" + $(".mainmenu").length;
   var dtmf_temp = $(
@@ -195,6 +197,10 @@ $('body').on('click','#add-dtmf', function(){
     );
 
   dtmf_temp.appendTo('.diagram');
+
+  $(".menu-message").mCustomScrollbar({
+        theme:"minimal-dark"
+  });
 
   if (id_dtmf == "dtmf_0" ) {
     $("#add-dtmf").hide();
@@ -277,16 +283,12 @@ jsPlumb.addEndpoint(numast, {
   anchor:[0.5, 0.5, 0, 2, 0, 0, "top" ],
 }, num);
 
-
-
 jsPlumb.draggable(id_dtmf);
 
 $('body').on('click','#'+id_dtmf+' .delete', function () {
   jsPlumb.remove(id_dtmf);
   $("#add-dtmf").show();
 });
-
-
 
 })
 
@@ -345,8 +347,6 @@ textpoints.addClass('showendpoint');
 
 jsPlumb.draggable(id_tts);
 })
-
-
 
 
 /** ADD TRANSFER CALL **/
@@ -467,6 +467,33 @@ $('body').on('click','#add-sound', function(){
   jsPlumb.draggable(id_sound);
 })
 
+/** DROP CALL*/
+$('body').on('click','#drop-call', function(){
+
+  var id_dc = "drop_" + $(".dropcall").length;
+
+  var dropcall = $(
+    '<div id="' + id_dc +'" class="dropcall">' +
+    '<img src="images/ivr/dropcall.png">' +
+    '<span class="delete-icon"><a href="Javascript:void(0)" class="xicon delete"  title="Remove"><i class="fa fa-trash-o" aria-hidden="true"></i></span></a>' +
+    '</span>' +
+    '</div>'
+    );
+
+  dropcall.appendTo('.diagram');
+
+
+  $('body').on('click','#'+id_dc+' .delete', function () {
+    jsPlumb.remove(id_dc);
+  });
+
+  jsPlumb.makeTarget(id_dc, {
+    anchor: "Top"
+  },endtarget);
+
+  jsPlumb.draggable(id_dc);
+})
 
 
 $('.dropdown-toggle').dropdown();
+

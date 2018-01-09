@@ -6188,6 +6188,129 @@ body {
       display: inline-block;
       cursor: pointer; }
 
+/** Delete Account **/
+/* Sign In Modal */
+#deletethis .close {
+  position: absolute;
+  right: 114px;
+  top: 36px; }
+
+#deletethis .logo-signin {
+  position: absolute;
+  top: 36px;
+  left: -33px; }
+
+#deletethis .modal-dialog {
+  width: 400px; }
+  #deletethis .modal-dialog .modal-content {
+    -webkit-box-shadow: 1px 1px 2px 0 #555;
+    box-shadow: 1px 1px 2px 0 #555;
+    padding: 20px 40px; }
+    #deletethis .modal-dialog .modal-content .modal-header {
+      text-align: center;
+      border: none; }
+      #deletethis .modal-dialog .modal-content .modal-header h3 {
+        text-align: center;
+        font-family: 'proxima_novalight'; }
+    #deletethis .modal-dialog .modal-content .modal-body {
+      padding: 0; }
+      #deletethis .modal-dialog .modal-content .modal-body form input[type='text'] {
+        padding: 0 10px;
+        background: #fff;
+        border: none;
+        border-bottom: 1px solid #ddd;
+        margin-bottom: 10px;
+        width: 100%;
+        height: 40px;
+        margin-bottom: 10px;
+        padding: 10px  0;
+        clear: both;
+        display: block;
+        font-size: 16px;
+        color: #919191;
+        width: 100%;
+        background: none;
+        margin-bottom: 25px; }
+      #deletethis .modal-dialog .modal-content .modal-body form .blue-bt {
+        background: #148ece;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        -ms-border-radius: 5px;
+        border-radius: 5px;
+        padding: 10px;
+        text-align: center;
+        color: #fff;
+        font-size: 16px;
+        font-weight: bold;
+        border: none;
+        margin: 25px auto;
+        height: 50px;
+        font-weight: 300;
+        border-bottom: 2px solid #ddd;
+        width: 100%; }
+        #deletethis .modal-dialog .modal-content .modal-body form .blue-bt:hover {
+          background: #137cb3; }
+      #deletethis .modal-dialog .modal-content .modal-body form a {
+        color: #148ece;
+        text-decoration: none; }
+        #deletethis .modal-dialog .modal-content .modal-body form a:hover {
+          color: #53b1e3; }
+      #deletethis .modal-dialog .modal-content .modal-body form .terms a {
+        font-size: 12px;
+        color: #929292;
+        text-decoration: none; }
+        #deletethis .modal-dialog .modal-content .modal-body form .terms a:hover {
+          color: #53b1e3; }
+      #deletethis .modal-dialog .modal-content .modal-body form .g-icon {
+        position: relative;
+        top: -3px; }
+        #deletethis .modal-dialog .modal-content .modal-body form .g-icon img {
+          width: 28px;
+          display: inline-block;
+          margin-right: 20px; }
+      #deletethis .modal-dialog .modal-content .modal-body form label {
+        font-size: 11px;
+        color: #9e9e9e;
+        clear: both;
+        display: block;
+        font-weight: normal; }
+      #deletethis .modal-dialog .modal-content .modal-body form .blue-title {
+        color: #148ece;
+        font-size: 16px;
+        margin-bottom: 30px; }
+      #deletethis .modal-dialog .modal-content .modal-body form .txt-field {
+        margin: 0 20px 0 0;
+        width: 45%; }
+      #deletethis .modal-dialog .modal-content .modal-body form .txt-add {
+        margin: 0 20px 0 0;
+        width: 55%; }
+      #deletethis .modal-dialog .modal-content .modal-body input[type=checkbox] + label {
+        display: inline-block;
+        padding: 0 0 0 0px;
+        background: url("images/main/check-sm.png") no-repeat;
+        cursor: pointer;
+        font-weight: 300;
+        color: #b8b8b8;
+        font-size: 13px;
+        text-indent: 20px; }
+      #deletethis .modal-dialog .modal-content .modal-body input[type=checkbox]:checked + label {
+        background: url("images/main/checked-sm.png") no-repeat;
+        display: inline-block;
+        cursor: pointer; }
+      #deletethis .modal-dialog .modal-content .modal-body input[type="password"] {
+        width: 100%;
+        -webkit-border-radius: 2px;
+        -moz-border-radius: 2px;
+        -ms-border-radius: 2px;
+        border-radius: 2px;
+        height: 50px;
+        line-height: 50px;
+        text-align: center;
+        border: 1px solid #ddd;
+        padding-left: 10px; }
+      #deletethis .modal-dialog .modal-content .modal-body .del-bt {
+        width: 46%; }
+
 /* Profile Setup */
 #profile-setup .close {
   position: absolute;
@@ -6427,7 +6550,7 @@ body {
       text-align: center !important;
       width: 115px !important; }
 
-html,
+menu-messagehtml,
 body {
   height: 100%;
   margin: 0px;
@@ -6568,6 +6691,16 @@ body {
 .transfercall:hover ~ .source-endpoint svg *, .sendsms:hover ~ .source-endpoint svg *, .soundclip:hover ~ .source-endpoint svg * {
   fill: rgba(0, 0, 0, 0.1); }
 
+.dropcall {
+  left: calc(50% - 72px);
+  position: absolute;
+  right: 0;
+  top: 520px;
+  display: block;
+  width: 144px;
+  height: 36px;
+  cursor: grab; }
+
 .texttospeech, .mainmenu, .transfercall, .sendsms, .soundclip {
   width: 460px;
   -webkit-border-radius: 5px;
@@ -6670,7 +6803,7 @@ body {
     display: inline; }
     .mainmenu .features-body .menu-message {
       cursor: default;
-      height: 200px;
+      height: 228px;
       margin: 10px 0;
       overflow-y: scroll;
       padding: 20px; }

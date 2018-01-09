@@ -1,4 +1,4 @@
-html,
+menu-messagehtml,
 body {
  height: 100%; margin: 0px; padding: 0px; 
 }
@@ -187,6 +187,18 @@ body {
 	fill: rgba(0, 0, 0, 0.1);
 }
 
+.dropcall {
+	left: calc(50% - 72px);
+	position: absolute;
+	right: 0;
+	top: 520px;
+	display:block;
+	width: 144px;
+	height:36px;
+	cursor: grab;
+
+}
+
 .texttospeech, .mainmenu,  .transfercall, .sendsms, .soundclip {
 	width:460px;
 	@include border-radius(5px);
@@ -305,7 +317,7 @@ body {
 
 		.menu-message {
 			cursor: default;
-		    height: 200px;
+		    height: 228px;
 		    margin: 10px 0;
 		    overflow-y: scroll;
 		    padding: 20px;

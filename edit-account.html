@@ -25,6 +25,29 @@
 <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 <![endif]-->
 </head>
+<div id="deletethis" class="modal fade" role="dialog">
+    <button type="button" class="close" data-dismiss="modal"><img src="images/Close.svg" width="30"></button>
+    <div class="modal-dialog">
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3 class="modal-title">Are you sure you want to delete this user?</h3><br>
+          <small>Enter password to confirm</small>
+        </div>
+        <div class="modal-body">
+          <form action="">
+              <input placeholder="Password" type="password">
+              <div class="row col-md-12 nopadding">
+                  <div class="col-md-6 nopadding pull-left del-bt">
+                    <button type="button" class="trans-br-bt col-md-5"  data-dismiss="modal">Cancel</button> </div>
+                  <div class="col-md-6 nopadding pull-right del-bt"><button type="button" class="blue-bt col-md-5">Continue</button>
+                  </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
 <body class="hold-transition skin-blue sidebar-mini">
   <div class="wrapper">
     <!-- Header -->
@@ -183,9 +206,11 @@
           </div>
         </section>  
         <section>
-          <div class="row text-left admsettings">
+          <div class="row text-left admsettings col-md-12 nopadding">
             <button type="button" class="trans-br-bt cancel">Cancel</button> 
-            <button type="button" class="blue-bt save">Save</button></div>
+            <button type="button" class="blue-bt save">Save</button>
+            <button type="button" data-toggle="modal" data-target="#deletethis"  class="trans-br-bt cancel pull-right"><img src="images/main/delete.svg" width="15" class="del-acc"> Delete</button>
+          </div>
           </section>
         </div>   
 

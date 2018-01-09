@@ -76,6 +76,65 @@ body {
 	}
 }
 
+/** Delete Account **/
+
+/* Sign In Modal */
+#deletethis {
+
+	.close {
+		position: absolute;
+		right: 114px;
+   		top: 36px;
+		}
+
+	.logo-signin {
+		position:absolute;
+		top:36px;
+		left:-33px;
+	}
+
+	.modal-dialog {
+		width:400px;
+		
+		.modal-content {
+			@include box-shadow(1px 1px 2px 0 #555);
+			padding:20px 40px;
+
+			.modal-header {
+				text-align: center;
+				border:none;
+
+				h3 {
+					text-align: center;
+					@include font-light();
+				}
+
+			}
+
+			.modal-body {
+					
+				padding:0;
+
+					@include forms();
+					input[type="password"] {
+						width: 100%;
+						@include border-radius(2px);
+						height: 50px;
+						line-height: 50px;
+						text-align: center;
+						border:1px solid #ddd;
+						padding-left: 10px;
+					
+					}
+
+					.del-bt {
+						width: 46%;
+					}
+				}
+			}
+		}
+}
+
 /* Profile Setup */
 
 #profile-setup {

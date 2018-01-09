@@ -13,13 +13,14 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
 	<link rel="stylesheet" href="assets/components/themes/dist/css/AdminLTE.css">
 	<link rel="stylesheet" href="assets/components/themes/dist/css/skins/skin-blue.css">
+	<link rel="stylesheet" href="assets/components/custom-scrollbar/jquery.mCustomScrollbar.css">
 	<link rel="stylesheet" href="app.css">
 	<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
 	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-<!--[if lt IE 9]>
-<script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-<![endif]-->
+	<!--[if lt IE 9]>
+	<script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+	<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+	<![endif]-->
 </head>
 <body class="hold-transition skin-blue sidebar-mini">
 	<!-- MODALS -->
@@ -251,9 +252,9 @@
 
 
 	<!-- DROP CALL -->
-	<div id="dropcall-modal" class="modal fade ivr" role="dialog">
+	<!-- <div id="drop-call-modal" class="modal fade ivr" role="dialog">
 		<div class="modal-dialog">
-			<!-- Modal content-->
+			
 			<div class="modal-content">
 				<div class="modal-header">
 					<button type="button" data-dismiss="modal" class="close">
@@ -269,13 +270,13 @@
 						<textarea placeholder="Enter Message"></textarea>
 						<div class="row text-left">
 							<button type="button" class="trans-br-bt cancel" data-dismiss="modal">Cancel</button>
-							<button type="button" class="blue-bt add">Add</button>
+							<button type="button" class="blue-bt" id="drop-call">Add</button>
 						</div>
 					</form>
 				</div>
 			</div>
 		</div>
-	</div>
+	</div>-->
 	<!-- END MODALS -->
 
 	<div class="ivr-wrapper">
@@ -303,21 +304,52 @@
 				<button class="dropdown-toggle" type="button" data-toggle="dropdown">IVR List
 					<span class="listview"></span>
 				</button>
-				<div class="dropdown-menu">
+				<div class="dropdown-menu dropdown-menu-form " role="menu">
 					<ul>
-						<li><a href="#">HTML</a></li>
-						<li><a href="#">CSS</a></li>
-						<li><a href="#">JavaScript</a></li>
+						<li class="start">
+							<input type="checkbox" checked id="Ford" value="">       
+							<label for="Ford"><span>Start Call</span></label> 
+
+						</li>
+						<li>
+							<input type="checkbox" checked id="tts1" value="">       
+							<label for="tts1"><span>Sample Text-to-Speech 1</span></label>
+						</li>
+						<li>
+							<input type="checkbox" checked id="Ford2" value="">       
+							<label for="Ford2"><span>Sample Menu 1</span></label>
+						</li>
+						<li>
+							<input type="checkbox" checked id="hotline" value="">       
+							<label for="hotline"><span>Transfer to Billing Hotline</span></label>
+						</li>
+						<li>
+							<input type="checkbox" checked id="menu1" value="">       
+							<label for="menu1"><span>Sample Menu 1</span></label>
+						</li>
+						<li>
+							<input type="checkbox" checked id="hotline2" value="">       
+							<label for="hotline2"><span>Transfer to Billing Hotline</span></label>
+						</li>
 					</ul>
+					<div class="col-md-12">	
+						<div class="col-md-4 pull-left text-left nopadding">
+							<a href=""><div class="pause"></div></a>
+						</div>
+						<div class="col-md-4 text-center nopadding">
+							<a href=""><div class="play"></div></a>
+						</div>
+						<div class="col-md-4 pull-right text-right nopadding">
+							<a href=""><div class="download"></div></a>
+						</div>
+					</div>
 				</div>
 			</div>
 		</header>
 
-		<aside class="ivr-main-sidebar">
+		<aside class="ivr-main-sidebar mCustomScrollbar">
 
-			<!-- sidebar: style can be found in sidebar.less -->
-
-			<ul class="tree-items">
+			<ul class="tree-items ">
 
 				<li >
 					<!--<a id="adtmf">-->
@@ -363,7 +395,7 @@
 						</a>
 					</li>
 					<li id="dc">
-						<a href="" data-toggle="modal" data-target="#dropcall" onclick="return false;">
+						<a href="" onclick="return false;" id="drop-call">
 							<span class="tree-icons"><img src="images/ivr/DropCall.svg" alt=""></span>
 							<span class="t-i-names">Drop Call</span>
 						</a>
@@ -378,7 +410,6 @@
 					<div class="panzoom">
 						<div class="diagram">
 							<div id="start"><img src="images/ivr/startCall.png" alt="" ></div>
-							<ivr-features></ivr-features>
 						</div>
 					</div>
 				</div>
@@ -399,5 +430,21 @@
 		<script src="assets/components/jquery.panzoom/dist/js/dagre.min.js"></script>
 		<script src="assets/js/ivr.js"></script>
 		<script src="assets/js/main.js"></script>
-	</body>
+		<!-- custom scrollbar plugin -->
+		<script src="assets/components/custom-scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+		<script src="../jquery.mCustomScrollbar.concat.min.js"></script>
+	    <script>
+			$("document").ready(function() {
+				$('.dropdown-menu').on('click', function(e) {
+					if($(this).hasClass('dropdown-menu-form')) {
+						e.stopPropagation();
+					}
+				});
+			});
+		</script>
+		<script> 
+			$(".dropdown-menu ul").mCustomScrollbar({
+				theme:"minimal-dark"
+			});
+	</script>
 	</html>

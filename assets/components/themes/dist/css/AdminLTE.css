@@ -5361,6 +5361,14 @@ table.text-center th {
   height:17px;
   display: block;
 }
+
+.admsettings2 {
+  display: inline-block;
+  padding: 20px 0;
+  color: #61697b;
+  width: 100%;
+}
+
 .admsettings {
   display: inline-block;
   padding: 20px 0;
@@ -5435,7 +5443,6 @@ table.text-center th {
 
 .admsettings .cancel {
   width:110px;
-  margin-right: 10px;
   text-align:center;
   background: #f7f8fa none repeat scroll 0 0;
   padding:0;
@@ -5444,7 +5451,7 @@ table.text-center th {
 
 .admsettings .save {
   width:110px;
-  margin-right: 10px;
+  margin-left: 10px;
   text-align:center;
 
 }
@@ -5455,6 +5462,12 @@ table.text-center th {
   margin-right: 10px;
   text-align:center;
 
+}
+
+.admsettings .del-acc {
+  position: relative;
+  top:-3px;
+  left:-2px;
 }
 
 .admsettings .delete img {
@@ -5536,7 +5549,7 @@ table.text-center th {
       color: #61697b;
       font-family: "proxima_novasemibold";
       height: 40px;
-      line-height: 50px;
+      line-height: 40px;
       padding-left: 15px;
       color:#61697b;
       margin-top: 18px;
@@ -5645,22 +5658,24 @@ table.text-center th {
     width: 100%;
   }
 
-.ivr-main-header a {
-    display: block;
-    width: 100%;
-    height: 100%;
-  }
+
 
 .ivr-list {
-  line-height: 55px;
+  margin-top: 10px;
 }  
+
+
 .ivr-main-header .dropdown-toggle {
-  background: #f7f8fa none repeat scroll 0 0;
+    background:url(../../../../../images/ivr/ListView.svg) no-repeat;
+    background-size: 16px;
+    background-position:211px 12px;
+    background-color: #f7f8fa;
     border: 1px solid #dee1e8;
     border-radius: 2px;
     margin: 2px 12px 0 0;
     line-height: normal;
-    padding: 5px 15px;
+    padding: 10px 15px;
+    font-size: 12px;
     text-align: left;
     width:240px;
 }
@@ -5668,16 +5683,110 @@ table.text-center th {
    margin: 0;
     padding: 0;
     position: relative;
-    top: -13px;
     width: 240px;
-    height: 250px;
+    height: 205px;
 }
+
+.ivr-main-header .ivr-list .dropdown-menu input[type=checkbox] {
+    display:none;
+    cursor:pointer;
+  }
+
+.ivr-main-header .ivr-list .dropdown-menu input[type=checkbox] + label {
+  
+    display:inline-block;
+    padding: 0 0 0 0px;
+    background:url(../../../../../images/main/check-sm.png) no-repeat center left;
+    height: 30px;
+    background-size: 12px;
+    cursor: pointer;
+    position: absolute;
+    width:88%;
+}
+
+.ivr-main-header .ivr-list .dropdown-menu input[type=checkbox]:checked + label {
+  
+    display:inline-block;
+    padding: 0 0 0 0px;
+    background:url(../../../../../images/main/checked-sm.png) no-repeat center left;
+    height: 30px;
+    background-size: 12px;
+    cursor: pointer;
+    position: absolute;
+    width: 100%;
+}
+
+
+
 .ivr-main-header .ivr-list .dropdown-menu ul {
-   margin: 0 auto;
+    margin: 0 auto;
+    overflow:hidden;
     overflow-y: scroll;
     padding: 0;
-    height: 100%;
-    width: 94%;
+    height: 150px;
+    margin:10px 0;
+    width: 98%;
+    line-height: 32px;
+    padding:0;
+    float: left;
+}
+.ivr-main-header .ivr-list .dropdown-menu ul li {
+    font-size: 11px;
+    color:#7c7c7d;
+    border-bottom: 1px solid #ddd;
+    padding-left: 10px;
+    height: 36px;
+    line-height: 36px;
+    position: relative;
+}
+.ivr-main-header .ivr-list .dropdown-menu ul li span {
+    padding-left: 20px;
+    position: relative;
+    top:-1px;
+}
+.ivr-main-header .ivr-list .dropdown-menu ul li:first-child  {
+    color:#52D8AF;
+  }
+.ivr-main-header .ivr-list .dropdown-menu .pause  {
+    background: url(../../../../../images/ivr/pause.png) no-repeat;
+    background-position: left;
+    display: block;
+    width:17px;
+    height: 17px;
+  }
+.ivr-main-header .ivr-list .dropdown-menu .pause:hover {
+   background: url(../../../../../images/ivr/pause-active.png) no-repeat;
+}
+.ivr-main-header .ivr-list .dropdown-menu .play  {
+    background: url(../../../../../images/ivr/play.png) no-repeat;
+    background-position: center;
+    display: block;
+    width:17px;
+    height: 17px;
+    margin:0 auto;
+  }
+  .ivr-main-header .ivr-list .dropdown-menu .play:hover  {
+    background: url(../../../../../images/ivr/play-active.png) no-repeat;
+  }
+.ivr-main-header .ivr-list .dropdown-menu .download  {
+    background: url(../../../../../images/ivr/download.png) no-repeat;
+    background-position: right;
+    display: block;
+    width:17px;
+    height: 17px;
+    float: right;
+  }
+.ivr-main-header .ivr-list .dropdown-menu .download:hover  {
+   background: url(../../../../../images/ivr/download-active.png) no-repeat;
+   background-position: right;
+}
+   
+.ivr-main-header .ivr-list .dropdown-menu ul li input[type="checkbox"] {
+  opacity: 0.5;
+  position: relative;
+  top:2px;
+  margin-right: 5px;
+  cursor: pointer;
 }
 .ivr-main-header .back-mini {
     background: #f7f8fa;
@@ -5730,7 +5839,6 @@ table.text-center th {
     left:0;
     top:0px;
     bottom:60px;
-    overflow-y: scroll;
     z-index: 3;
     margin-top: 60px;
 }
@@ -5739,6 +5847,7 @@ table.text-center th {
   padding:0;
   margin:0;
   list-style: none;
+  width: 90%;
 }
 .ivr-main-sidebar ul li {
   text-align: center;
